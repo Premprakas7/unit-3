@@ -1,0 +1,17 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+}
+#menu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+#image{
+    width: 250px;
+    height: 250px;
+}
+#name{
+    font-size: 18px;
+    font-weight: 600;
+}

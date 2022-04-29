@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+      div{
+          height:300px;
+      }
+#container{
+    display: flex;
+    height:600px;
+    background-color: maroon;
+}
+#input-section{
+    flex: 1; margin: 5%;
+}
+#input-text{
+width:98%;height:80%;
+}
+#output-section{
+    border: 1px solid black;
+    flex: 1; margin: 5%;
+}
+  </style>
+  <body>
+    <div id="container">
+      <div id="input-section">
+          <button onclick="translateText()" id="translate-btn">Translate</button>            
+<textarea name="" id="input-text"></textarea>
+</div>
+      <div id="output-section">
+        <p id="translated-text">
+          <!--Show translated text here-->
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+async function  translateText(){
+    let input = document.getElementById("input-text").value;
+
+    let res=await fetch("https://libretranslate.de/translate",{
+        method:"POST",
+          body:JSON.stringify({
+              q:input,
+              source :'en',
+              target:'hi',
+              format:'text'
+          }),
+
+    headers:{
+       
+        "Content-Type":"application/json",
+    },
+    });
+let data=await res.json();
+document.getElementById("translated-text").innerText=data.translatedText;
+console.log(data);
+
+}
+</script>

@@ -1,0 +1,36 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: #005f73;
+
+  }
+  .options {
+
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .options h3 {
+
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+  a{
+      color: white;
+  }
+  #data{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 10px;
+  }
+  #photo{
+      width: 350px;
+  }
+  #name{
+      font-size: 18px;
+      font-weight: 800;
+      color: #005f73;
+  }

@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="url" >
+    <button onclick="storeImages()">Submit Image</button>
+    </body>
+</html>
+
+<script>
+    function storeImages(){
+    var img=document.getElementById('url').value;
+    var images=localStorage.getItem('images')
+    console.log('images',images)
+        images=JSON.parse(localStorage.getItem('images'))||[];
+        images.push(img);
+    
+    localStorage.setItem('images',JSON.stringify(images))
+}
+</script>

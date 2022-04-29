@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+function status(name,proffesional,place){
+    this.name = name;
+    this.proffesional = proffesional;
+    this.place = place;
+}
+var f1 = new status("Amar","Singer","Goa");
+var f2 = new status("Akbar","Chef","Mumbai");
+var f3 = new status("Anthony","Magician","Kashmir")
+
+
+function change_proffesional(){
+    if(this.proffesional=="Singer"){
+        this.proffesional = "Chef";
+        console.log(f1);
+    }
+    
+   else if(this.proffesional=="Chef"){
+        this.proffesional = "Singer";
+        console.log(f2)
+    }
+
+    else{
+        this.proffesional = "Magician";
+        console.log(f3);
+    }
+}
+
+change_proffesional.call(f1);
+change_proffesional.call(f2);
+change_proffesional.call(f3);
+
+</script>

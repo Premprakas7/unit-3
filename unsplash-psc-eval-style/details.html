@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #main{
+        
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+  </style>
+
+  <body>
+    <div id="main">
+      <!--No need to add sidebar here, directly display search results here only-->
+    </div>
+  </body>
+</html>
+<script >
+    let dataArr=[];
+    let data=JSON.parse(localStorage.getItem("clicked_image"));
+    console.log(dataArr);
+    dataArr.push(data);
+    dataArr.forEach((e)=>{
+        let div=document.createElement('div')
+    
+    
+            let p=document.createElement('p')
+            p.innerText=e.user.name;
+    
+            let img=document.createElement('img')
+            img.src=e.urls.small;
+
+            div.append(img,p);
+            document.getElementById("main").append(div);
+
+    })
+</script>

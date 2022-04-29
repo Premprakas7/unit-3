@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(115deg, rgb(63, 62, 62) 10%, #111111 90%);;
+        }
+        
+        #container{
+           
+            margin:auto;
+            margin-top:130px;
+            width:600px;
+            text-align: center;
+        
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding:100px;
+        }
+        #container:hover{
+            background: linear-gradient(115deg, rgb(235, 215, 226) 10%, #8f7d7d 90%);
+            width:700px;
+            font-size: 20px;
+            font-family: monospace;
+                        
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+    var arr = JSON.parse(localStorage.getItem("student"));
+    
+    arr.map(function(data){
+        var h1 = document.createElement("h1");
+        h1.textContent = data.name;
+
+        var h2 = document.createElement("h2");
+        h2.textContent = data.num;
+
+        var h3 = document.createElement("h3");
+        h3.textContent = data.city;
+
+        document.querySelector("#container").append(h1,h2,h3)
+    })
+
+</script>

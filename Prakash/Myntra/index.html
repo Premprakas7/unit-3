@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            #product{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+            }
+        </style>
+
+    </head>
+    <body>
+        <div >
+            <select id="sort"  onchange="sortPrice()" >
+                <option value="">Price sort</option>
+                <option value="High">High to Low</option>
+                <option value="Low">Low to High</option>
+
+            </select>
+
+        </div>
+        <div id="product">
+        
+        </div>
+    </body>
+</html>
+<script src="index.js"></script>

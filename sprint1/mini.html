@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            #box{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-gap: 20px;
+            }
+            #box >div{
+                border: 1px solid maroon;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="ObjProperties()" >Object</button>
+        <button onclick="ArrayProperties()" >Array</button>
+        <button onclick="FunctionProperties()" >Function</button>
+        <button onclick="NumProperties()" >Numbers</button>
+        <button onclick="UndefProperties()" >undefined</button>
+        <button onclick="NullProperties()" >null</button>
+        <div id="box">
+        <h1 class="object">1</h1>
+        
+        </div>
+        
+
+    </body>
+    
+</html>
+<script>
+    function ObjProperties() {
+        document.querySelector(".object").textContent=`1. object is a standalone entity that holds multiple values in terms of properties and methods.
+2.Object property stores a literal value and method represents function.
+3.An object can be created using object literal or object constructor syntax`;
+    }
+    function ObjProperties() {
+        document.querySelector(".object").textContent=`1. object is a standalone entity that holds multiple values in terms of properties and methods.
+2.Object property stores a literal value and method represents function.
+3.An object can be created using object literal or object constructor syntax`;
+    }
+
+
+</script>

@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+
+    <body>
+        <div id="m">
+            <input type="text" id="search_box" oninput="items()" >
+        </div>
+    </body>
+
+
+
+</html>
+
+import items from "./scripts/showData.js"
+let box=document.getElementById("search_box").value;
+let url=`https://www.themealdb.com/api/json/v1/1/search.php?s=${box}`
+let res=await items(url);
+console.log(res);
+
+
+
+
+<script>
+async function items() {
+    try{
+        let box=document.getElementById("search_box").value
+        let res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${box}`);
+
+ let data = await res.json();
+
+ console.log("data:", data);
+ }
+ catch(err){
+     console.log(err);
+
+ }
+
+    }
+
+ //http://www.omdbapi.com/?i=tt3896198&apikey=5d2ddf93&s==avenger
+
+</script>
+
+
+
+
+
